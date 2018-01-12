@@ -28,14 +28,8 @@ class PermissionRegistrar
 
     public function registerPermissions(): bool
     {
-        $this->gate->before(function (Authenticatable $user, string $ability) {
-            try {
-                if (method_exists($user, 'hasPermissionTo')) {
-                    return $user->hasPermissionTo($ability) ?: null;
-                }
-            } catch (PermissionDoesNotExist $e) {
-            }
-        });
+        
+        // Deleted the before function in order to use the Laravel Policies
 
         return true;
     }
