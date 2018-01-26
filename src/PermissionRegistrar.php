@@ -6,8 +6,6 @@ use Illuminate\Support\Collection;
 use Illuminate\Contracts\Auth\Access\Gate;
 use Illuminate\Contracts\Cache\Repository;
 use Spatie\Permission\Contracts\Permission;
-use Illuminate\Contracts\Auth\Authenticatable;
-use Spatie\Permission\Exceptions\PermissionDoesNotExist;
 
 class PermissionRegistrar
 {
@@ -28,7 +26,7 @@ class PermissionRegistrar
 
     public function registerPermissions(): bool
     {
-        
+
         // Deleted the before function in order to use the Laravel Policies
 
         return true;
