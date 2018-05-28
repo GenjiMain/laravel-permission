@@ -32,7 +32,7 @@ class Role extends Model implements RoleContract
     {
         $attributes['guard_name'] = $attributes['guard_name'] ?? config('auth.defaults.guard');
 
-        if (static::where('name', $attributes['name'])->where('guard_name', $attributes['guard_name'])->first()) {
+        if (static::where('name', $attributes['name'])->where('guard_name', $attributes['guard_name'])->where('esn_id', $attributes['esn_id'])->first()) {
             throw RoleAlreadyExists::create($attributes['name'], $attributes['guard_name']);
         }
 
