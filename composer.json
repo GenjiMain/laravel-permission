@@ -1,6 +1,3 @@
-// 20200803125551
-// https://raw.githubusercontent.com/spatie/laravel-permission/master/composer.json
-
 {
   "name": "spatie/laravel-permission",
   "description": "Permission handling for Laravel 5.8 and up",
